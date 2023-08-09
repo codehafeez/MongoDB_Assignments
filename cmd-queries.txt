@@ -1,0 +1,62 @@
+// Run mongodb
+mongo
+
+
+// select db
+use hafeez_db
+
+
+// create collection
+db.createCollection("users")
+
+
+// insert one data
+db.users.insertOne({ name: "John Doe", age: 30, email: "john@example.com" })
+
+
+// insert muliple data
+db.users.insertMany([
+  { name: "Alice", age: 25, email: "alice@example.com" },
+  { name: "Bob", age: 28, email: "bob@example.com" },
+  { name: "Eve", age: 22, email: "eve@example.com" }
+])
+
+
+// Return all users (collection) data
+db.users.find()
+
+
+// Return 2 users (collection) data
+db.users.find().limit(2)
+
+
+// Filter data with one value
+db.users.find({ name: "John Doe" })
+
+
+// Update single data
+db.users.updateOne({ name: "John Doe" }, { $set: { age: 31 } })
+
+
+// Update multiple data
+db.users.updateMany({ name: "John Doe" }, { $set: { age: 31 } })
+
+
+// Delete single data
+db.users.deleteOne({ age: 30 })
+
+
+// Delete multiple data
+db.users.deleteMany({ age: 30 })
+
+
+// Sort ASC
+db.users.find().sort({ age: 1 })
+
+
+// Sort DESC
+db.users.find().sort({ age: -1 })
+
+
+// Sort Multiple Values
+db.users.find().sort({ age: 1, name: -1 })

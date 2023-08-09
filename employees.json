@@ -1,0 +1,29 @@
+[
+    {
+        "employee_id": 1,
+        "employee_name": "John Doe",
+        "employee_email": "john.doe@example.com",
+        "employee_phone": "123-456-7890",
+        "employee_dob": "1985-08-15",
+        "employee_age": 37,
+        "employee_address": "123 Main Street, CityA, CountryX"
+    },
+    {
+        "employee_id": 2,
+        "employee_name": "Jane Smith",
+        "employee_email": "jane.smith@example.com",
+        "employee_phone": "987-654-3210",
+        "employee_dob": "1990-03-20",
+        "employee_age": 32,
+        "employee_address": "456 Park Avenue, CityB, CountryY"
+    },
+    {
+        "employee_id": 3,
+        "employee_name": "Michael Johnson",
+        "employee_email": "michael.johnson@example.com",
+        "employee_phone": "555-123-4567",
+        "employee_dob": "1988-12-08",
+        "employee_age": 33,
+        "employee_address": "789 Oak Road, CityC, CountryZ"
+    }
+]

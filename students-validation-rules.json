@@ -1,0 +1,27 @@
+{
+	"bsonType": "object",
+  "required": ["name", "age", "email", "courses"],
+  "properties": {
+    "name": {
+      "bsonType": "string",
+      "description": "must be a string and is required",
+    },
+    "age": {
+      "bsonType": "int",
+      "minimum": 18,
+      "description": "must be an integer (>= 18) and is required",
+    },
+    "email": {
+      "bsonType": "string",
+      "pattern": "^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\\.[a-zA-Z]{2,}$",
+      "description": "must be a valid email address and is required",
+    },
+    "courses": {
+      "bsonType": "array",
+      "items": {
+        "bsonType": "string",
+        "description": "must be an array of strings (course names)",
+      },
+    }
+  }
+}

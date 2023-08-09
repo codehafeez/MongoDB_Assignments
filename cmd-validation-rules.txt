@@ -1,0 +1,55 @@
+mongo
+use hafeez_db;
+
+db.createCollection("students", {
+  validator: {
+    $jsonSchema: {
+      bsonType: "object",
+      required: ["name", "age", "email", "courses"],
+      properties: {
+        name: {
+          bsonType: "string",
+          description: "must be a string and is required",
+        },
+        age: {
+          bsonType: "int",
+          minimum: 18,
+          description: "must be an integer (>= 18) and is required",
+        },
+        email: {
+          bsonType: "string",
+          pattern: "^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\\.[a-zA-Z]{2,}$",
+          description: "must be a valid email address and is required",
+        },
+        courses: {
+          bsonType: "array",
+          items: {
+            bsonType: "string",
+            description: "must be an array of strings (course names)",
+          },
+        },
+      },
+    },
+  },
+});
+
+
+
+db.students.insertOne({
+  name: "John Doe",
+  age: 20,
+  email: "john.doe@example.com",
+  courses: ["Mathematics", "Physics"],
+});
+
+// success insert
+
+
+
+db.students.insertOne({
+  name: "Jane Smith",
+  email: "jane.smith@example.com",
+  courses: ["Biology", "Chemistry"],
+});
+
+// error => fails validation due to missing "age" field

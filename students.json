@@ -1,0 +1,29 @@
+[
+  {
+    "student_id": 1,
+    "student_name": "John Doe",
+    "student_email": "john.doe@example.com",
+    "student_phone": "123-456-7890",
+    "student_dob": "1995-10-15",
+    "student_age": 27,
+    "student_address": "123 Main Street, CityA, CountryX"
+  },
+  {
+    "student_id": 2,
+    "student_name": "Jane Smith",
+    "student_email": "jane.smith@example.com",
+    "student_phone": "987-654-3210",
+    "student_dob": "1998-05-20",
+    "student_age": 24,
+    "student_address": "456 Park Avenue, CityB, CountryY"
+  },
+  {
+    "student_id": 3,
+    "student_name": "Michael Johnson",
+    "student_email": "michael.johnson@example.com",
+    "student_phone": "555-123-4567",
+    "student_dob": "1997-02-08",
+    "student_age": 26,
+    "student_address": "789 Oak Road, CityC, CountryZ"
+  }
+]
